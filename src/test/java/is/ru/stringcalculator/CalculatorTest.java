@@ -29,12 +29,14 @@ public class CalculatorTest {
     	assertEquals(6, Calculator.add("1,2,3"));
     }
 
-@Test
+	@Test
     public void testMultipleNumberswithnewlines(){
     	assertEquals(6, Calculator.add("1\n2\n3"));
     }
-  
 
-    
+    @Test
+    public void testMultipleNumberswithnewlinesandcommas(){
+    	assertEquals(6, Calculator.add("1\n2,3"));
+    }
 
 }
