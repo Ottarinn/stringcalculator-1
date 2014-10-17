@@ -39,4 +39,14 @@ public class CalculatorTest {
     	assertEquals(6, Calculator.add("1\n2,3"));
     }
 
+    @Test
+	public void testMinusnumbers(){
+		try{
+			Calculator.add("-4,5,-7,2");
+		}
+		catch(RuntimeException prufa){
+			assertEquals("Negatives not allowed: -4,-7,", prufa.getMessage());
+		}
+	}
+
 }
