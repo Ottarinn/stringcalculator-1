@@ -54,4 +54,9 @@ public class CalculatorTest {
     	assertEquals(14, Calculator.add("1000\n10,4"));
     }
 
+    @Test
+	public void testanydelimiter(){
+		assertEquals(20, Calculator.add("//[*][%]\n4*14%2"));
+	}
+
 }

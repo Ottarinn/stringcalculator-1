@@ -6,6 +6,9 @@ public class Calculator {
 		if(text.equals("")){
 			return 0;
 		}
+		else if(text.startsWith("//")){
+			return sum(splitCustomDelimiter(text));
+		}
 		else if (text.contains(",") && text.contains("\n")){
 			return sum(splitNumbersonnewlineorcommas(text));
 		}
@@ -33,6 +36,12 @@ public class Calculator {
 
 	private static String[] splitNumbersonnewlineorcommas(String numbers){
 	    return numbers.split("\n|\\,");
+	}
+
+	private static String[] splitCustomDelimiter(String numbers){
+		String temp = numbers.substring(numbers.indexOf('\n') + 1, numbers.length());
+		String newTemp = temp.replaceAll("[^0-9&^-]+", ",");
+		return newTemp.split(",");
 	}
       
     private static int sum(String[] numbers){
