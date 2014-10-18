@@ -49,4 +49,9 @@ public class CalculatorTest {
 		}
 	}
 
+	@Test
+    public void isitbiggerthan1k(){
+    	assertEquals(14, Calculator.add("1000\n10,4"));
+    }
+
 }

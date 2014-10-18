@@ -45,7 +45,7 @@ public class Calculator {
 		        	{
 		        		ottar.add(number);
 		        	}
-	        	else if (toInt(number) > 0)
+	        	else if (toInt(number) > 0 && toInt(number) < 1000)
 	        		{
 	        			total += toInt(number);
 	        		}
